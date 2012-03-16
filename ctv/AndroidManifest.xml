@@ -10,9 +10,18 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
+        
+</activity>
 
-    </application>
+    
+<activity 
+	android:name="testActivity" 
+	android:screenOrientation="sensor"
+	android:label="@string/app_name">
+</activity>
+
+</application>
     <uses-sdk android:minSdkVersion="8" />
+
 
 </manifest> 
