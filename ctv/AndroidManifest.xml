@@ -23,6 +23,9 @@
         <activity android:name=".CTVStream"
         		android:screenOrientation="sensor">
         </activity>
+        <activity android:name=".ScheduleView"
+        		android:screenOrientation="sensor">
+        </activity>
 <!--<activity 
 	android:name="testActivity" 
 	android:screenOrientation="sensor"

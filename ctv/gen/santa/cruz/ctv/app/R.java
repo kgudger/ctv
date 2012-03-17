@@ -21,6 +21,7 @@ public final class R {
         public static final int FrameLayout01=0x7f050000;
         public static final int SCCTV1=0x7f050003;
         public static final int SCCTVImage1=0x7f050002;
+        public static final int ScrollView01=0x7f05000d;
         public static final int ctv1Button=0x7f050004;
         public static final int ctv2Button=0x7f050007;
         public static final int ctv3Button=0x7f05000a;
@@ -30,11 +31,13 @@ public final class R {
         public static final int stream1=0x7f050005;
         public static final int stream2=0x7f050008;
         public static final int stream3=0x7f05000b;
+        public static final int text1=0x7f05000e;
         public static final int webView=0x7f050001;
     }
     public static final class layout {
         public static final int ctv1stream=0x7f030000;
         public static final int main=0x7f030001;
+        public static final int schedule=0x7f030002;
     }
     public static final class string {
         public static final int SCCTV1=0x7f040005;

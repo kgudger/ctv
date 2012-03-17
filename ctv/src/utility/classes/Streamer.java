@@ -15,7 +15,7 @@ import android.net.Uri;
  * @author James Koenig
  * @version 0.0.c
  * @category wrapper objects
- */
+ 
 
 public class Streamer implements streamerInterface 
 {
@@ -31,7 +31,7 @@ public class Streamer implements streamerInterface
 		player = MediaPlayer.create(source, fileStreamUri);
 	} //end constructor
 	
-	@Override
+/*	@Override
 	public boolean play() 
 	{
 		if(player.getAudioSessionId() != 0)  //the documentation clearly states getAudioSessionId exists, probably a version difference issue
@@ -61,4 +61,4 @@ public class Streamer implements streamerInterface
 	{
 		//TODO method stub
 	}// end stop
-} //end Streamer
+} //end Streamer*/
