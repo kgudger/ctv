@@ -14,19 +14,22 @@ import android.widget.TextView;
 
 public class SearchAct extends Activity {
 	
-    @Override
+   @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 //        setContentView(R.layout.search);
         setContentView(R.layout.searchview);
 //        setContentView(R.layout.ctv1stream);
-        handleIntent(getIntent());
-
-       
+        Bundle bundle = getIntent().getExtras();
+		String searchstring = bundle.getString("santa.cruz.ctv.app.stream_data");
+        handleIntent(getIntent(),searchstring);
     }
 
 	private void doAnotherSearch(String query) {
 		// TODO Auto-generated method stub
+    	final TextView textViewToChange = (TextView)findViewById(R.id.searchwindow);
+    	String another = query;
+       	textViewToChange.setText(another);
 /*		EditText cinput;      
 		String input;  
 		TextView result;
@@ -35,7 +38,7 @@ public class SearchAct extends Activity {
       input = cinput.getText().toString();
       result = (TextView)findViewById(R.id.searchwindow);
       result.setText(input);
-*/
+
 	   AlertDialog.Builder builder = new AlertDialog.Builder(this);
 	   builder.setMessage(query)
 	          .setCancelable(false)
@@ -51,7 +54,7 @@ public class SearchAct extends Activity {
 	          });
 	   AlertDialog alert = builder.create(); 
 	   alert.show();
-/*		ListAdapter adapter = new SimpleCursorAdapter(
+		ListAdapter adapter = new SimpleCursorAdapter(
                 this, // Context.
                 android.R.layout.two_line_list_item,  // Specify
                 mCursor,                                              // Pass in the cursor to bind to.
@@ -74,13 +77,12 @@ public class SearchAct extends Activity {
         // Bind to our new adapter.
         setListAdapter(adapter);
 */	}
-	private void handleIntent(Intent intent) {
+	private void handleIntent(Intent intent, String searchstring) {
 	    if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
-	      String query = intent.getStringExtra(SearchManager.QUERY);
+		     String query = intent.getStringExtra(SearchManager.QUERY);
 	      doMySearch(query);
         }else {
-        	String query = "Another Search" ;
-            doAnotherSearch(query);       	
+   	       	doAnotherSearch(searchstring);       	
         }
 	}
 }

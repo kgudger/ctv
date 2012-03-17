@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.EditText;
 
 public class CTV extends Activity 
 	implements OnClickListener 
@@ -82,7 +83,9 @@ public class CTV extends Activity
     	else
     	{
     		Intent startNewActivityOpen = new Intent(this, SearchAct.class);
-    		startNewActivityOpen.putExtra("santa.cruz.ctv.app.stream_data", x);
+    		EditText searchText = (EditText) findViewById(R.id.search1box);
+    		String searchstring = searchText.getText().toString();
+    		startNewActivityOpen.putExtra("santa.cruz.ctv.app.stream_data", searchstring);
     		startActivity(startNewActivityOpen);
     		
     	}
