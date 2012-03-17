@@ -1,17 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     >
-<TextView  
-    android:layout_width="fill_parent" 
-    android:layout_height="wrap_content" 
-    android:text="@string/hello"
-    />
+
+<ImageView android:layout_width="wrap_content" 
+	android:layout_height="wrap_content" 
+	android:id="@+id/SCCTVImage1" 
+	android:layout_alignParentLeft="true"
+	android:src="@drawable/ctvheader"
+	>
+</ImageView>
+
+
+<TextView android:layout_width="wrap_content" 
+	android:layout_alignParentLeft="true" 
+	android:layout_height="wrap_content" 
+	android:layout_below="@id/SCCTVImage1"
+	android:id="@+id/SCCTV1" 
+	android:text="@string/SCCTV1"></TextView>
+
+<!-- <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="70dip"> -->
+
+<ImageButton android:id="@+id/ctv1Button" 
+	android:layout_width="wrap_content" 
+	android:layout_height= "70dip"
+	android:background="#808080"
+	android:src="@drawable/ctvlogo"
+	android:layout_below="@id/SCCTV1"
+	android:text="CTV1" >
+	
+</ImageButton>
+<!-- 
 <TextView
-	android:id="@+id/simpleText"
-    android:layout_width="fill_parent" 
-    android:layout_height="wrap_content" 
-    />
-</LinearLayout>
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:textColor="#ff0000"
+        android:text="1" />  -->
+
+<!--   </FrameLayout> -->
+<Button android:layout_width="wrap_content" 
+	android:text="@string/stream1" 
+	android:layout_toRightOf="@id/ctv1Button"
+	android:id="@+id/stream1" 
+	android:layout_height= "70dip"
+	android:layout_below="@id/SCCTV1"
+	>
+</Button>
+
+<Button android:layout_width="wrap_content" 
+	android:text="@string/schedule1" 
+	android:layout_toRightOf="@id/stream1"
+	android:id="@+id/schedule1" 
+	android:layout_height= "70dip"
+	android:layout_below="@id/SCCTV1"
+	>
+</Button>
+
+	
+<ImageButton android:id="@+id/ctv2Button" 
+	android:text="CTV2" 
+	android:layout_height= "70dip"
+	android:layout_width="wrap_content"
+	android:background="#808080"
+	android:src="@drawable/ctv2logo"
+	android:layout_below="@id/ctv1Button"
+	>
+</ImageButton>
+	
+<Button android:layout_width="wrap_content" 
+	android:text="@string/stream1" 
+	android:layout_below="@id/stream1"
+	android:id="@+id/stream2" 
+	android:layout_height= "70dip"
+	android:layout_toRightOf="@id/ctv2Button"
+	>
+</Button>
+
+<Button android:layout_width="wrap_content" 
+	android:text="@string/schedule1" 
+	android:layout_toRightOf="@id/stream2"
+	android:id="@+id/schedule2" 
+	android:layout_height= "70dip"
+	android:layout_below="@id/schedule1"
+	>
+</Button>
+
+<ImageButton android:text="CTV3" 
+	android:id="@+id/ctv3Button" 
+	android:layout_width="wrap_content" 
+	android:layout_height= "70dip"
+	android:background="#808080"
+	android:src="@drawable/ctvplogo"
+	android:layout_below="@id/ctv2Button">
+</ImageButton>
+
+<Button android:layout_width="wrap_content" 
+	android:text="@string/stream1" 
+	android:layout_below="@id/stream2"
+	android:id="@+id/stream3" 
+	android:layout_height= "70dip"
+	android:layout_toRightOf="@id/ctv3Button"
+	>
+</Button>
+
+<Button android:layout_width="wrap_content" 
+	android:text="@string/schedule1" 
+	android:layout_toRightOf="@id/stream3"
+	android:id="@+id/schedule3" 
+	android:layout_height= "70dip"
+	android:layout_below="@id/schedule2"
+	>
+</Button>
+
+
+</RelativeLayout>

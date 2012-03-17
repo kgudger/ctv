@@ -2,4 +2,9 @@
 <resources>
     <string name="hello">Hello World, CTV!</string>
     <string name="app_name">CTV</string>
+    <string name="stream1_name">CTV Stream</string>
+	<string name="stream1">Stream</string>
+	<string name="schedule1">Schedule</string>
+	<string name="SCCTV1">Community Television of Santa Cruz County</string>
+	<string name="debugText">Debugging Text!</string>
 </resources>
