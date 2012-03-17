@@ -13,8 +13,7 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-       <meta-data android:name="android.app.default_searchable"
-                   android:value=".SearchableActivity" />        
+        
 		</activity>
 
 		<activity android:name=".CTV1Stream"
@@ -27,23 +26,11 @@
         <activity android:name=".ScheduleView"
         		android:screenOrientation="sensor">
         </activity>
-<activity android:name=".SearchableActivity" 
-	android:launchMode="singleTop" >
-        <intent-filter>
-            <action android:name="android.intent.action.SEARCH" />
-        </intent-filter>
-        <meta-data android:name="android.app.searchable"
-                   android:resource="@xml/searchable"/>
-</activity>
-
-    <!-- this activity enables the search dialog to initiate searches
-         in the SearchableActivity -->
-
-<activity android:name=".SearchAct" >
-        <!-- enable the search dialog to send searches to SearchableActivity -->
-        <meta-data android:name="android.app.default_searchable"
-                   android:value=".SearchableActivity" />
-</activity>
+<!--<activity 
+	android:name="testActivity" 
+	android:screenOrientation="sensor"
+	android:label="@string/app_name">
+</activity> -->
 
 </application>
     <uses-sdk android:minSdkVersion="8" />

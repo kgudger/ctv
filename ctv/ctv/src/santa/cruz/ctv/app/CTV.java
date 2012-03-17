@@ -24,9 +24,6 @@ public class CTV extends Activity
         View schedule2 = findViewById(R.id.schedule2);
         View schedule3 = findViewById(R.id.schedule3);
         
-        View ctvSearch = findViewById(R.id.search1);
-        ctvSearch.setOnClickListener(this);
- 
         //set up the click listening       
         stream1.setOnClickListener(this);
         stream2.setOnClickListener(this);
@@ -60,10 +57,6 @@ public class CTV extends Activity
 	   		case (R.id.schedule3):
 	   			x = 6;
 	   			break;
-	   		case (R.id.search1):
-	   			x = 7;
-	   			break;
-
 	   		default:
 	   			break;
     	} //end switch
@@ -73,25 +66,13 @@ public class CTV extends Activity
     		startNewActivityOpen.putExtra("santa.cruz.ctv.app.stream_data", x);
     		startActivity(startNewActivityOpen);
     	} //end if
-    	else if ( x < 7 )
+    	else
     	{
     		Intent startNewActivityOpen = new Intent(this, ScheduleView.class);
     		startNewActivityOpen.putExtra("santa.cruz.ctv.app.stream_data", x);
     		startActivity(startNewActivityOpen);
     	}
-    	else
-    	{
-    		Intent startNewActivityOpen = new Intent(this, SearchAct.class);
-    		startNewActivityOpen.putExtra("santa.cruz.ctv.app.stream_data", x);
-    		startActivity(startNewActivityOpen);
-    		
-    	}
 	} //end onClick
-    @Override
-    public boolean onSearchRequested() {
-        //pauseSomeStuff();
-        return super.onSearchRequested();
-    }
 } //end CTV
 
 

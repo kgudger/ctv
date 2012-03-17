@@ -7,9 +7,4 @@
 	<string name="schedule1">Schedule</string>
 	<string name="SCCTV1">Community Television of Santa Cruz County</string>
 	<string name="debugText">Debugging Text!</string>
-	<string name="search_hint">Search CTV Schedules</string>
-	<string name="menu_search">Search Menu</string>
-	<string name="searchresults">Search Results</string>
-	<string name="search1">Search</string>
-	<string name="search1_name">Search CTV</string>
 </resources>

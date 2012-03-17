@@ -21,6 +21,9 @@
 	android:id="@+id/SCCTV1" 
 	android:text="@string/SCCTV1"></TextView>
 
+<!-- <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="70dip"> -->
 
 <ImageButton android:id="@+id/ctv1Button" 
 	android:layout_width="wrap_content" 
@@ -31,7 +34,14 @@
 	android:text="CTV1" >
 	
 </ImageButton>
+<!-- 
+<TextView
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:textColor="#ff0000"
+        android:text="1" />  -->
 
+<!--   </FrameLayout> -->
 <Button android:layout_width="wrap_content" 
 	android:text="@string/stream1" 
 	android:layout_toRightOf="@id/ctv1Button"
@@ -106,24 +116,5 @@
 	>
 </Button>
 
-<Button android:text="@string/search1" 
-	android:layout_width="wrap_content" 
-	android:layout_alignParentLeft="true" 
-	android:id="@+id/search1" 
-	android:layout_below="@id/ctv3Button"
-	android:layout_height= "70dip"
-	>
-</Button>
-
-<EditText 
-	android:layout_width="wrap_content" 
-	android:id="@+id/search1box" 
-	android:layout_below="@id/stream3"
-	android:layout_height= "70dip"
-	android:layout_toRightOf="@id/search1"
-	android:hint="@string/search_hint" >
-	
-	>
-</EditText>
 
 </RelativeLayout>
