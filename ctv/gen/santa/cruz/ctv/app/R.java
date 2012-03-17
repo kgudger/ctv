@@ -28,9 +28,10 @@ public final class R {
         public static final int schedule1=0x7f060006;
         public static final int schedule2=0x7f060009;
         public static final int schedule3=0x7f06000c;
+        public static final int scrollView=0x7f060011;
         public static final int search1=0x7f06000d;
         public static final int search1box=0x7f06000e;
-        public static final int searchwindow=0x7f060011;
+        public static final int searchwindow=0x7f060012;
         public static final int stream1=0x7f060005;
         public static final int stream2=0x7f060008;
         public static final int stream3=0x7f06000b;
