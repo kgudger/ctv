@@ -15,6 +15,7 @@ public class CTVStream extends Activity
 {
 	//local data
 	private String information = "";
+	private WebView web = (WebView) null ;
 	//methods
     @Override
     public void onCreate(Bundle savedInstanceState) {          
@@ -28,7 +29,7 @@ public class CTVStream extends Activity
 		setInformation(i);
 		
 		//--set up the web view component
-		WebView web = (WebView) findViewById(R.id.webView);
+		web = (WebView) findViewById(R.id.webView);
 		//enable javascript, but don't allow it to open windows
 		web.getSettings().setJavaScriptEnabled(true);
 		web.getSettings().setJavaScriptCanOpenWindowsAutomatically(false);
@@ -41,9 +42,6 @@ public class CTVStream extends Activity
 		//don't allow either scrollbar
 		web.setVerticalScrollBarEnabled(false);
 		web.setHorizontalScrollBarEnabled(false);
-		
-		//load the web view component
-		web.loadUrl(information);
 		
 		//TextView viewText = (TextView) findViewById(R.id.debugText);
 		//viewText.setText(""+bundle.getInt("santa.cruz.ctv.app.stream_data"));
@@ -66,4 +64,24 @@ public class CTVStream extends Activity
 		} //end switch
 		information = result;
 	} //end setInformation 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        // The activity has become visible (it is now "resumed").
+		//load the web view component
+		web.loadUrl(information);
+    }
+    @Override
+    protected void onPause() {
+        super.onPause();
+        // Another activity is taking focus (this activity is about to be "paused").
+        web.stopLoading ();
+    }
+    @Override
+    protected void onStop() {
+        super.onPause();
+        // Another activity is taking focus (this activity is about to be "paused").
+        web.stopLoading ();
+        web = (WebView) null ;
+    }
 } //end CTVStream
