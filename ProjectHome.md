@@ -1,0 +1,1 @@
+Santa Cruz Community TV application for the Android platform.
